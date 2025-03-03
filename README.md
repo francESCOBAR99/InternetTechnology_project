@@ -166,8 +166,10 @@ Alternatively, you can deploy your application to a free PaaS like [Render](http
 
 
 #### Maintainer
-- Charuta Pande
-- Devid Montecchiari
+- Dominik Thaller
+- Francesco Leono
+- Michelle Liva
+- Sidal Oezbey 
 
 #### License
 - [Apache License, Version 2.0](blob/master/LICENSE)
