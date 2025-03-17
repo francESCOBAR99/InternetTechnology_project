@@ -63,6 +63,9 @@ The `ch.fhnw.pizza.data.domain` package contains the following domain objects / 
 
 ![](images/domain-model.png)
 
+<img width="347" alt="image" src="https://github.com/user-attachments/assets/0ed10f7d-001d-404e-b973-96c1e3e0124f" />
+
+
 ### Business Logic 
 > 🚧: Describe the business logic for **at least one business service** in detail. If available, show the expected path and HTPP method. The remaining documentation of APIs shall be made available in the swagger endpoint. The default Swagger UI page is available at /swagger-ui.html.
 
