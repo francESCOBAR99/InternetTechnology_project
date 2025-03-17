@@ -63,7 +63,7 @@ The `ch.fhnw.pizza.data.domain` package contains the following domain objects / 
 
 ![](images/domain-model.png)
 
-<img width="347" alt="image" src="https://github.com/user-attachments/assets/0ed10f7d-001d-404e-b973-96c1e3e0124f" />
+<img width="449" alt="image" src="https://github.com/user-attachments/assets/73d5d084-9004-4542-bf6d-fa61a7fe53e6" />
 
 
 ### Business Logic 
