@@ -40,6 +40,14 @@ FHNW Thrift is a online markeplace for students at FHNW to resale studying mater
 
 ![](images/use-case.png)
 
+- UC-1 User creates object
+- UC-2 User changes existing object
+- UC-3 User deletes own object
+- UC-4 User can flag object as suspicious
+- UC-5 Admin can create, edit, delete objects
+- UC-6 User can sort by school location
+- UC-7 User can contact other user through portal
+
 - UC-1 [Show all the Pizza]: Admin can retrieve all the pizza on the menu
 - UC-2 [Show a Pizza]: Admin can retrieve the information on a specific pizza.
 - UC-3 [Edit a Pizza]: Admin can create, update, and delete pizzas from the menu.
