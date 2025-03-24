@@ -152,11 +152,14 @@ Alternatively, you can deploy your application to a free PaaS like [Render](http
 9. This unique URL will remain unchanged as long as your web service is deployed on Render. You can now integrate it in Budibase to make API calls to your custom endpoints.
 
 ## Project Management
-> 🚧: Include all the participants and briefly describe each of their **individual** contribution and/or roles. Screenshots/descriptions of your Kanban board or similar project management tools are welcome.
 
 ### Roles
-- Back-end developer: Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
-- Front-end developer: Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
+- Back-end developer (creation of code, maintenance and testing): Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
+- Front-end developer (creation of code, maintenance and testing): Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
+- Scenario Analysis (Analysis of the business case, segregation of tasks and compiling ideas): Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
+- Prototype Design (Designing the prototype on paper and implementation on Budibase): Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
+- README file maintenance (Maintaining the GitHub README file throughout the project): Michelle Liva
+- Budibase maintenance (Maintaining the Budibase prototype throughout the project): Dominik Thaller, Sidal Oezbey 
 
 ### Milestones
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
@@ -168,7 +171,7 @@ Alternatively, you can deploy your application to a free PaaS like [Render](http
 7. (optional) **Deployment**: Deployment of Web application on cloud infrastructure.
 
 ## Current Standing in the Milestone
-
+(to create BPM) 
 
 #### Maintainer
 - Dominik Thaller
