@@ -155,8 +155,8 @@ Alternatively, you can deploy your application to a free PaaS like [Render](http
 > 🚧: Include all the participants and briefly describe each of their **individual** contribution and/or roles. Screenshots/descriptions of your Kanban board or similar project management tools are welcome.
 
 ### Roles
-- Back-end developer: Charuta Pande 
-- Front-end developer: Devid Montecchiari
+- Back-end developer: Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
+- Front-end developer: Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
 
 ### Milestones
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
@@ -167,10 +167,12 @@ Alternatively, you can deploy your application to a free PaaS like [Render](http
 6. **Security and Frontend Implementation**: Integration of security framework and frontend realisation.
 7. (optional) **Deployment**: Deployment of Web application on cloud infrastructure.
 
+## Current Standing in the Milestone
+
 
 #### Maintainer
 - Dominik Thaller
-- Francesco Leono
+- Francesco Leone
 - Michelle Liva
 - Sidal Oezbey 
 
