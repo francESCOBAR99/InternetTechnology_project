@@ -19,7 +19,7 @@
 ## Analysis
 > 🚧: You can reuse the analysis (you made) from other projects (e.g., requirement engineering), but it must be submitted according to the following template. 
 
-
+In today's academic curriculum, students are often faced with the dilemma what to do with their accumulated school materials, such as textbooks, notebooks, related equipment, digital resources and many more. These become obsolete and frequently go unused, which leads to unnecessary waste and a financial strain for new students looking into purchasing them in full price. 
 
 ### Scenario
 
@@ -59,7 +59,6 @@ FHNW Thrift is an online markeplace for students at FHNW to resell studying mate
 The design has been sketched through drawio and is currently being created in Budibase.
 
 ### Wireframe
-> 🚧: It is suggested to start with a wireframe. The wireframe focuses on the website structure (Sitemap planning), sketching the pages using Wireframe components (e.g., header, menu, footer) and UX. You can create a wireframe already with draw.io or similar tools. 
 
 The wireframe is created through drawio in order to visualize what is being planned for the prototype to look like. 
 LInk: https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?usp=sharing 
