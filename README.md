@@ -23,7 +23,7 @@
 
 ### Scenario
 
-FHNW Thrift is a online markeplace for students at FHNW to resale studying material and other things.
+FHNW Thrift is an online markeplace for students at FHNW to resell studying material and other things. Through the platform, students, teachers and other individuals that are within the FHNW organization are allowed to create offers and sell their items. Users are also allowed report malicious offerings to avoid fraud, which the administrators of the program will also be able to delete and alert the users about suspicious profiles. This way, the platform remains with only legitimate offers and profiles of individuals within the FHNW organization. 
 
 ### User Stories
 1. As a user, I want to create offers for my fellow students.
@@ -48,21 +48,27 @@ FHNW Thrift is a online markeplace for students at FHNW to resale studying mater
 - UC-6 User can sort by school location
 - UC-7 User can contact other user through portal
 
-- UC-1 [Show all the Pizza]: Admin can retrieve all the pizza on the menu
-- UC-2 [Show a Pizza]: Admin can retrieve the information on a specific pizza.
-- UC-3 [Edit a Pizza]: Admin can create, update, and delete pizzas from the menu.
-- UC-4 [Show Current Location Offer]: User can retrieve special menu by location
+- UC-1 [Show all the offers]: Admin can retrieve all the offerings on the database
+- UC-2 [Show an offer]: Admin can retrieve the information on a specific offer.
+- UC-3 [Edit an offer]: User can create, update, and delete offers from the database.
+- UC-4 [Show Location Offers]: User can retrieve specific offers by location.
 
 ## Design
 > 🚧: Keep in mind the Corporate Identity (CI); you shall decide appropriately the color schema, graphics, typography, layout, User Experience (UX), and so on.
 
+The design has been sketched through drawio and is currently being created in Budibase.
+
 ### Wireframe
 > 🚧: It is suggested to start with a wireframe. The wireframe focuses on the website structure (Sitemap planning), sketching the pages using Wireframe components (e.g., header, menu, footer) and UX. You can create a wireframe already with draw.io or similar tools. 
 
-Starting from the home page, we can visit different pages. Available public pages are visible in the menu...
+The wireframe is created through drawio in order to visualize what is being planned for the prototype to look like. 
+LInk: https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?usp=sharing 
 
 ### Prototype
 > 🚧: A prototype can be designed using placeholder text/figures in Budibase. You don't need to connect the front-end to back-end in the early stages of the project development.
+
+The prototype is currently being created through Budibase. 
+Link: <iframe width="800" height="600" frameborder="0" allow="clipboard-write;camera;geolocation;fullscreen" src="https://internettechnologyprojectbitpt3b2025.budibase.app/embed/fhnw-thrift"></iframe>
 
 ### Domain Design
 > 🚧: Provide a picture and describe your domain model; you may use Entity-Relationship Model or UML class diagram. Both can be created in Visual Paradigm - we have an academic license for it.
