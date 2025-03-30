@@ -21,7 +21,7 @@
 
 In today's academic curriculum, students are often faced with the dilemma what to do with their accumulated school materials, such as textbooks, notebooks, related equipment, digital resources and many more. These become obsolete and frequently go unused, which leads to unnecessary waste and a financial strain for new students looking into purchasing them in full price. 
 
-### Scenario
+### Scenario (question: how long should the analysis introduction be?) 
 
 FHNW Thrift is an online markeplace for students at FHNW to resell studying material and other things. Through the platform, students, teachers and other individuals that are within the FHNW organization are allowed to create offers and sell their items. Users are also allowed report malicious offerings to avoid fraud, which the administrators of the program will also be able to delete and alert the users about suspicious profiles. This way, the platform remains with only legitimate offers and profiles of individuals within the FHNW organization. 
 
@@ -64,40 +64,37 @@ The wireframe is created through drawio in order to visualize what is being plan
 LInk: https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?usp=sharing 
 
 ### Prototype
-> 🚧: A prototype can be designed using placeholder text/figures in Budibase. You don't need to connect the front-end to back-end in the early stages of the project development.
 
 The prototype is currently being created through Budibase. 
 Link: <iframe width="800" height="600" frameborder="0" allow="clipboard-write;camera;geolocation;fullscreen" src="https://internettechnologyprojectbitpt3b2025.budibase.app/embed/fhnw-thrift"></iframe>
 
-### Domain Design
+### Domain Design (still to be done) 
 > 🚧: Provide a picture and describe your domain model; you may use Entity-Relationship Model or UML class diagram. Both can be created in Visual Paradigm - we have an academic license for it.
 
-The `ch.fhnw.pizza.data.domain` package contains the following domain objects / entities including getters and setters:
+(The `ch.fhnw.pizza.data.domain` package contains the following domain objects / entities including getters and setters:
 
 ![](images/domain-model.png)
 
-<img width="449" alt="image" src="https://github.com/user-attachments/assets/73d5d084-9004-4542-bf6d-fa61a7fe53e6" />
+<img width="449" alt="image" src="https://github.com/user-attachments/assets/73d5d084-9004-4542-bf6d-fa61a7fe53e6" />)
 
 
 ### Business Logic 
-> 🚧: Describe the business logic for **at least one business service** in detail. If available, show the expected path and HTPP method. The remaining documentation of APIs shall be made available in the swagger endpoint. The default Swagger UI page is available at /swagger-ui.html.
 
-Based on the UC-4, there will be two offers and a standard offer. Given a location, a message is shown accordingly:
+Based on the UC-4 and UC-5, there will be the opportunity that the user can report a post and the Admin to delete it and also take measures to act on this report. 
 
-- If the location is "Basel", the message is "10% off on all large pizzas!!!"
-- If the location is "Brugg", the message is "two for the price of One on all small pizzas!!!"
-- Otherwise, the message is "No special offer".
+- If the offer on the platform looks suspicious, the user is allowed to report it through a "Report!" button or through a message to the Admin. 
+- If the offer on the platform looks suspicious, the Admin is allowed to delete the post and either warn or ban the user from creating new posts. 
 
-**Path**: [`/api/menu/?location="Basel"`] 
+**Path**: (path for the business logic to be still attached)
 
-**Param**: `value="location"` Admitted value: "Basel","Brugg".
+**Param**: (parameter for the business logic to be still attached)
 
 **Method:** `GET`
 
-## Implementation
+## Implementation (still to be done) 
 > 🚧: Briefly describe your technology stack, which apps were used and for what.
 
-### Backend Technology
+### Backend Technology (still to be done) 
 > 🚧: It is suggested to clone this repository, but you are free to start from fresh with a Spring Initializr. If so, describe if there are any changes to the PizzaRP e.g., different dependencies, versions & etc... Please, also describe how your database is set up. If you want a persistent or in-memory H2 database check [link](https://github.com/FHNW-INT/Pizzeria_Reference_Project/blob/main/pizza/src/main/resources/application.properties). If you have placeholder data to initialize at the app, you may use a variation of the method **initPlaceholderData()** available at [link](https://github.com/FHNW-INT/Pizzeria_Reference_Project/blob/main/pizza/src/main/java/ch/fhnw/pizza/PizzaApplication.java).
 
 This Web application is relying on [Spring Boot](https://projects.spring.io/spring-boot) and the following dependencies:
@@ -129,12 +126,12 @@ Then, the following further dependencies have been added to the project `pom.xml
    </dependency>
 ```
 
-### Frontend Technology
+### Frontend Technology (still to be done) 
 > 🚧: Describe your views and what APIs is used on which view. If you don't have access to the Internet Technology class Budibase environment(https://inttech.budibase.app/), please write to Devid on MS teams.
 
 This Web application was developed using Budibase and it is available for preview at https://inttech.budibase.app/app/pizzeria. 
 
-## Execution
+## Execution (still to be done) 
 > 🚧: Please describe how to execute your app and what configurations must be changed to run it. 
 
 **The codespace URL of this Repo is subject to change.** Therefore, the Budibase PizzaRP webapp is not going to show any data in the view, when the URL is not updated or the codespace is offline. Follow these steps to start the webservice and reconnect the webapp to the new webservice url. 
@@ -167,12 +164,12 @@ Alternatively, you can deploy your application to a free PaaS like [Render](http
 ## Project Management
 
 ### Roles
-- Back-end developer (creation of code, maintenance and testing): Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
-- Front-end developer (creation of code, maintenance and testing): Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
-- Scenario Analysis (Analysis of the business case, segregation of tasks and compiling ideas): Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
-- Prototype Design (Designing the prototype on paper and implementation on Budibase): Dominik Thaller, Francesco Leone, Michelle Liva, Sidal Oezbey
+- Back-end developer (creation of code, maintenance and testing): Francesco Leone, Michelle Liva, Sidal Oezbey
+- Front-end developer (creation of code, maintenance and testing): Francesco Leone, Michelle Liva, Sidal Oezbey
+- Scenario Analysis (Analysis of the business case, segregation of tasks and compiling ideas): Francesco Leone, Michelle Liva, Sidal Oezbey
+- Prototype Design (Designing the prototype on paper and implementation on Budibase): Francesco Leone, Michelle Liva, Sidal Oezbey
 - README file maintenance (Maintaining the GitHub README file throughout the project): Michelle Liva
-- Budibase maintenance (Maintaining the Budibase prototype throughout the project): Dominik Thaller, Sidal Oezbey 
+- Budibase maintenance (Maintaining the Budibase prototype throughout the project): Sidal Oezbey 
 
 ### Milestones
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
