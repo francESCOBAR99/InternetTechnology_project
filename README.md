@@ -184,7 +184,6 @@ Alternatively, you can deploy your application to a free PaaS like [Render](http
 (to create BPM) 
 
 #### Maintainer
-- Dominik Thaller
 - Francesco Leone
 - Michelle Liva
 - Sidal Oezbey 
