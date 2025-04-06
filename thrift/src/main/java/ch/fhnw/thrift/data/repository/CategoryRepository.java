@@ -11,5 +11,5 @@ import ch.fhnw.pizza.data.domain.Pizza;
 //JpaRepository should be typed to the domain class and an ID type
 public interface CategoryRepository extends JpaRepository<Category, Long> {
     Category findByCategoryName(String categoryName);
-    List<Category> findAllByPizzaToppingsContainsIgnoreCase(String topping);
+    List<Category> findAllByCategoryTypeContainsIgnoreCase(String category);
 }
