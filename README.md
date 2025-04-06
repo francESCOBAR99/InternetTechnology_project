@@ -136,14 +136,17 @@ This Web application was developed using Budibase and it is available for previe
 
 **The codespace URL of this Repo is subject to change.** Therefore, the Budibase PizzaRP webapp is not going to show any data in the view, when the URL is not updated or the codespace is offline. Follow these steps to start the webservice and reconnect the webapp to the new webservice url. 
 
-> 🚧: This is a shortened description for example purposes. A complete tutorial will be provided in a dedicated lecture.
-
 1. Clone PizzaRP in a new repository.
 2. Start your codespace (see video guide at: [link](https://www.youtube.com/watch?v=_W9B7qc9lVc&ab_channel=GitHub))
 3. Run the PizzaRP main available at PizzaApplication.java on your own codespace.
 4. Set your app with a public port, see the guide at [link](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace).
 5. Create an own Budibase app, you can export/import the existing Pizzeria app. Guide available at [link](https://docs.budibase.com/docs/export-and-import-apps).
 6. Update the pizzeria URL in the datasource and publish your app.
+
+Project Team's procedure:
+1. PizzaRP is cloned in a new repository.
+2. Codespace started and copilot used to gather inspiration for the new code for "thrift" as shown in this repository.
+3. 
 
 ### Deployment to a PaaS
 > 🚧: Deployment to PaaS is optional but recommended as it will make your application (backend) accessible without server restart and through a unique, constantly available link.  
