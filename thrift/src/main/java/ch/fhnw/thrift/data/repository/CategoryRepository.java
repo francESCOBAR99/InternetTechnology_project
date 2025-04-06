@@ -1,4 +1,4 @@
-package ch.fhnw.pizza.data.repository;
+package ch.fhnw.thrift.data.repository;
 
 import java.util.List;
 
@@ -9,7 +9,7 @@ import ch.fhnw.pizza.data.domain.Pizza;
 
 @Repository
 //JpaRepository should be typed to the domain class and an ID type
-public interface PizzaRepository extends JpaRepository<Pizza, Long> {
-    Pizza findByPizzaName(String pizzaName);
-    List<Pizza> findAllByPizzaToppingsContainsIgnoreCase(String topping);
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+    Category findByCategoryName(String categoryName);
+    List<Category> findAllByPizzaToppingsContainsIgnoreCase(String topping);
 }
