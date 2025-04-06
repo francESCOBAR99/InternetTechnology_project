@@ -1,4 +1,4 @@
-package ch.fhnw.pizza.data.domain;
+package ch.fhnw.thrift.data.domain;
 
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.Column;
@@ -10,23 +10,24 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "pizza")
-public class Pizza {
+@Table(name = "category")
+public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Hidden //This annotation hides the id field from the swagger documentation
     @Column(name = "id", nullable = false)
     private Long id;
+    private String name;
 
-    @Column(name = "pizza_toppings")
-    private String pizzaToppings;
+    @Column(name = "category_type")
+    private String categoryType;
 
-    @Column(name = "pizza_name")
-    private String pizzaName;
+    @Column(name = "category_name")
+    private String categoryName;
 
     @ManyToOne
-    private Menu menu;
+    private Item item;
 
     public Long getId() {
         return id;
@@ -36,20 +37,20 @@ public class Pizza {
         this.id = id;
     }
 
-    public String getPizzaToppings() {
-        return pizzaToppings;
+    public String getCategoryType() {
+        return categoryType;
     }
 
-    public void setPizzaToppings(String pizzaToppings) {
-        this.pizzaToppings = pizzaToppings;
+    public void setCategoryType(String categoryType) {
+        this.categoryType = categoryType;
     }
 
-    public String getPizzaName() {
-        return pizzaName;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public void setPizzaName(String pizzaName) {
-        this.pizzaName = pizzaName;
+    public void setCategoryName(String categoryName) {
+        this.categoryName = categoryName;
     } 
     
 }
