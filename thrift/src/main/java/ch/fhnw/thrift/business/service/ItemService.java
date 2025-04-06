@@ -1,4 +1,6 @@
-package ch.fhnw.pizza.business.service;
+package ch.fhnw.thrift.business.service;
+
+// still to do! 
 
 import java.util.List;
 
