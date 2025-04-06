@@ -1,4 +1,4 @@
-package ch.fhnw.pizza.data.domain;
+package ch.fhnw.thrift.data.domain;
 
 import java.util.List;
 
