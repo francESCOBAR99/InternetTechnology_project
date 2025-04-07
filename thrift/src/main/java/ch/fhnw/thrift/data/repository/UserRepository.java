@@ -7,7 +7,7 @@ import ch.fhnw.pizza.data.domain.thrift;
 
 @Repository
 //JpaRepository should be typed to the domain class and an ID type
-public interface ItemRepository extends JpaRepository<Item, Long> {
-    Item findByItemId(String ItemId);
+public interface UserRepository extends JpaRepository<User, Long> {
+    Item findByUserId(String UserId);
 }
 
