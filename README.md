@@ -61,7 +61,7 @@ The design has been sketched through drawio and is currently being created in Bu
 ### Wireframe
 
 The wireframe is created through drawio in order to visualize what is being planned for the prototype to look like. 
-LInk: https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?usp=sharing 
+LInk: [https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?usp=sharing ](https://app.diagrams.net/#G1EdAtBRFfmMlq_bZgUat0rvuNs8qZ22Bt#%7B%22pageId%22%3A%226ppb-k3glDpuP1GKOrRW%22%7D)
 
 ### Prototype
 
