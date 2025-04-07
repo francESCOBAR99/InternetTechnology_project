@@ -7,40 +7,43 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ch.fhnw.pizza.data.domain.Menu;
-import ch.fhnw.pizza.data.domain.Pizza;
-import ch.fhnw.pizza.data.repository.PizzaRepository;
+import ch.fhnw.thrift.data.domain.Item;
+import ch.fhnw.thrift.data.domain.Catgory;
+import ch.fhnw.thrift.data.repository.ItemRepository;
+import ch.fhnw.thrift.data.repository.CategoryRepository;
 
 @Service
-public class MenuService {
+public class ItemService {
 
     @Autowired
-    private PizzaRepository pizzaRepository;
+    private ItemRepository itemRepository;
 
-    public Pizza findPizzaById(Long id) {
+    public Item findItemaById(Long id) {
         try {
-            Pizza pizza = pizzaRepository.findById(id).get();
-            return pizza;
+            Item item = itemRepository.findById(id).get();
+            return item;
         } catch (Exception e) {
-            throw new RuntimeException("Pizza with id " + id + " not found");
+            throw new RuntimeException("Item with id " + id + " not found");
         }
     }
 
-    public List<Pizza> getAllPizzas() {
-        List<Pizza> pizzaList = pizzaRepository.findAll();
-        return pizzaList;
+    public List<Category> getAllCategories() {
+        List<Category> categoryList = categoryRepository.findAll();
+        return categoryList;
     }
 
-    public Pizza addPizza(Pizza pizza) throws Exception {
-        if(pizza.getPizzaName() != null) {
-            if (pizzaRepository.findByPizzaName(pizza.getPizzaName()) == null)
-                return pizzaRepository.save(pizza);
-            throw new Exception("Pizza " + pizza.getPizzaName() + " already exists");
+    public Item createItem(Item item) throws Exception {
+        if(pizza.getItemName() != null) {
+            if (itemRepository.findByItemaName(item.getItemName()) == null)
+                return itemRepository.save(item);
+            throw new Exception("Item " + item.getItemName() + " already exists");
         }
-        throw new Exception("Invalid pizza name ");
+        throw new Exception("Invalid item name ");
     }
 
-    public Pizza updatePizza(Long id, Pizza pizza) throws Exception {
+
+    // how to update the item? - still to do 
+    public item updatePizza(Long id, Pizza pizza) throws Exception {
         Pizza pizzaToUpdate = pizzaRepository.findById(id).get();
         if(pizzaToUpdate != null) {
             if(pizza.getPizzaName() != null)
