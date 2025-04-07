@@ -10,17 +10,16 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.ManyToOne;
 
 @Entity
-public class Item {
+public class User {
 
     @Id
     @JsonIgnore
     private Long id;
-    private String name;
-    private String description;
-    private Double price;
+    private String username;
+    private String email;
 
-    @ManyToOne(mappedBy = "item")
-    private List<Category> categoryList;
+    @ManyToOne(mappedBy = "user")
+    private List<User> userList;
 
     public Long getId() {
         return id;
@@ -30,38 +29,29 @@ public class Item {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name; 
+    public void setUsername(String username) {
+        this.username = username; 
     }
 
-    public String getDescription() {
-        return description;
+    public String getEmail() {
+        return email;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setUserList(List<User> userList) {
+        this.userList = userList;
     }
 
-    public List<Category> getCategoryList() {
-        return categoryList;
-    }
-
-    public void setCategoryList(List<Category> categoryList) {
-        this.categoryList = categoryList;
-    }
-
-    
     
 }
