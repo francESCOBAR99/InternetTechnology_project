@@ -28,7 +28,8 @@ public class ThriftApplication {
 	// If you are persisting data in a file (see application.properties), initializing data that already exists will cause an error during starting the application
 	// To resolve the error, delete the file and restart the application
 	@PostConstruct
-	private void initPlaceholderData() throws Exception {
+	private void initPlaceholderData() {
+		try {
 		Item item1 = new Item();
 		item1.setName("FHNW Tote Bag");
 		item1.setDescription("Official FHNW merch");
@@ -41,6 +42,8 @@ public class ThriftApplication {
 		item2.setPrice(25.0);
 		itemService.createItem(item2);
 		
+	} catch (Exception e) {
+		e.printStackTrace();
 	}
-
+	}
 }
