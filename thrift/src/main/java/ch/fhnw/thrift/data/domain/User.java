@@ -4,23 +4,28 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 @Entity
+@Table(name = "users")
 public class User {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @JsonIgnore
+    @Column(name = "id", nullable = false)
     private Long id;
+
+    @Column(name = "username", nullable = false, unique = true)
     private String username;
+
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @ManyToOne(mappedBy = "user")
-    private List<User> userList;
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Item> items;
 
+    // getters and setters
     public Long getId() {
         return id;
     }
@@ -44,14 +49,5 @@ public class User {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
-    }
-
-    
+   
 }

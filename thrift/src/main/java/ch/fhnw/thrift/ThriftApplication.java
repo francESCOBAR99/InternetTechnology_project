@@ -29,15 +29,17 @@ public class ThriftApplication {
 	// To resolve the error, delete the file and restart the application
 	@PostConstruct
 	private void initPlaceholderData() throws Exception {
-		Item item = new Item();
-		pizza.setItemName("FHNW Tote Bag");
-		pizza.setItemDescription("Official FHNW merch");
-		itemService.addItem(item);
+		Item item1 = new Item();
+		item1.setName("FHNW Tote Bag");
+		item1.setDescription("Official FHNW merch");
+		item1.setPrice(15.0);
+		itemService.createItem(item1);
 
-		item = new Item();
-		pizza.setItemName("Business Maths Book");
-		pizza.setItemDescription("Barely used Business Maths 1 Book for BIT students");
-		itemService.addItem(item);
+		Item item2 = new Item();
+		item2.setName("Business Maths Book");
+		item2.setDescription("Barely used Business Maths 1 Book for BIT students");
+		item2.setPrice(25.0);
+		itemService.createItem(item2);
 		
 	}
 

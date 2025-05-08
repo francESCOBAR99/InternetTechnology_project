@@ -19,7 +19,7 @@ public class Item {
     private String description;
     private Double price;
 
-    @ManyToOne(mappedBy = "item")
+    @ManyToOne
     private List<Category> categoryList;
 
     public Long getId() {

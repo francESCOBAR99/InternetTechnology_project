@@ -1,85 +1,79 @@
 package ch.fhnw.thrift.business.service;
 
-// still to do! 
+
+
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ch.fhnw.thrift.data.domain.Item;
-import ch.fhnw.thrift.data.domain.Catgory;
+import ch.fhnw.thrift.data.domain.Category;
 import ch.fhnw.thrift.data.repository.ItemRepository;
 import ch.fhnw.thrift.data.repository.CategoryRepository;
 
 @Service
 public class ItemService {
 
+    private final CategoryRepository categoryRepository = null;
+
     @Autowired
     private ItemRepository itemRepository;
 
-    public Item findItemaById(Long id) {
-        try {
-            Item item = itemRepository.findById(id).get();
-            return item;
-        } catch (Exception e) {
-            throw new RuntimeException("Item with id " + id + " not found");
+    public Item findByItemId(Long id) {
+        Optional<Item> item = itemRepository.findById(id);
+        if (item.isPresent()) {
+            return item.get();
+        } else {
+            throw new RuntimeException("Item with id" + id + " not found");
         }
     }
 
+    public List<Item> getAllItems() {
+        return itemRepository.findAll();
+    }
+
     public List<Category> getAllCategories() {
-        List<Category> categoryList = categoryRepository.findAll();
-        return categoryList;
+        return categoryRepository.findAll();
     }
 
     public Item createItem(Item item) throws Exception {
-        if(pizza.getItemName() != null) {
-            if (itemRepository.findByItemaName(item.getItemName()) == null)
+        if(item.getName() != null) {
+            if (!itemRepository.existsById(item.getId())) {
                 return itemRepository.save(item);
-            throw new Exception("Item " + item.getItemName() + " already exists");
+        }
+            throw new Exception("Item " + item.getName() + " already exists");
         }
         throw new Exception("Invalid item name ");
     }
 
+    public Item updateItem(Long id, Item updatedItem) throws Exception {
+        Optional<Item> itemToUpdate = itemRepository.findById(id);
+        if (itemToUpdate.isPresent()) {
+            Item existingItem = itemToUpdate.get();
+            if (updatedItem.getName() != null) {
+            existingItem.setName(updatedItem.getName());
+            }
+            if (updatedItem.getDescription() != null) {
+            existingItem.setDescription(updatedItem.getDescription());
+            }
+            if (updatedItem.getPrice() != null) {
+            existingItem.setPrice(updatedItem.getPrice());
+            }
+            return itemRepository.save(existingItem);
+        } 
+        throw new Exception("Item with id " + id + " not found");
 
-    // how to update the item? - still to do 
-    public item updatePizza(Long id, Pizza pizza) throws Exception {
-        Pizza pizzaToUpdate = pizzaRepository.findById(id).get();
-        if(pizzaToUpdate != null) {
-            if(pizza.getPizzaName() != null)
-                pizzaToUpdate.setPizzaName(pizza.getPizzaName());
-            if(pizza.getPizzaToppings() != null)
-                pizzaToUpdate.setPizzaToppings(pizza.getPizzaToppings());
-            return pizzaRepository.save(pizzaToUpdate);
-        }
-        throw new Exception("Pizza with id " + id + " does not exist");
     }
 
-    public void deletePizza(Long id) throws Exception {
-        if(pizzaRepository.existsById(id)) {
-            pizzaRepository.deleteById(id);
-        } else
+    public void deleteItem(Long id) throws Exception {
+        if(itemRepository.existsById(id)) {
+            itemRepository.deleteById(id);
+        } else { 
             throw new Exception("Pizza with id " + id + " does not exist");
+        }
     }
-
-    //Business Logic to get current offer according to the location of the user requesting the menu
-    private String getCurrentOffer(String location) {
-        String currentOffer = "No special offer for your location. Do check back again.";
-        if("Basel".equalsIgnoreCase(location))
-            currentOffer = "10% off on all large pizzas!!!";
-        else if("Brugg".equalsIgnoreCase(location))
-            currentOffer = "Two for the price of One on all small pizzas!!!";
-        return currentOffer;
-    }
-
-    public Menu getMenuByLocation(String location) {
-        String currentOffer = getCurrentOffer(location);
-        List<Pizza> pizzaList = getAllPizzas();
-        Menu menu = new Menu();
-        menu.setPizzaList(pizzaList);
-        menu.setCurrentOffer(currentOffer);
-        return menu;
-    }
-
         
 }

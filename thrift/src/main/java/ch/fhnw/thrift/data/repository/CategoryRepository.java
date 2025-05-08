@@ -5,11 +5,17 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import ch.fhnw.pizza.data.domain.Pizza;
+import ch.fhnw.thrift.data.domain.*;
 
 @Repository
-//JpaRepository should be typed to the domain class and an ID type
 public interface CategoryRepository extends JpaRepository<Category, Long> {
+
+    // finding category by name 
     Category findByCategoryName(String categoryName);
-    List<Category> findAllByCategoryTypeContainsIgnoreCase(String category);
+
+    // finding all categories where the category type contains specific string
+    List<Category> findAllByCategoryTypeContainsIgnoreCase(String categoryType);
+
+    // finding all categories associated with specific item ID 
+    List<Category> findAllByItem_Id(Long itemID);
 }

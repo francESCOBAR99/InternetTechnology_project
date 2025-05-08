@@ -12,65 +12,65 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
 @RestController
-@RequestMapping(path="/item")
+@RequestMapping(path = "/items")
 public class ItemController {
 
     @Autowired
     private ItemService itemService;
 
-    @GetMapping(path="/pizzas/{id}", produces = "application/json")
-    public ResponseEntity getItem(@PathVariable Long id) {
+    @GetMapping(path = "/{id}", produces = "application/json")
+    public ResponseEntity<Item> getItem(@PathVariable Long id) {
         try{
-            Item item = itemService.findItemById(id);
+            Item item = itemService.findByItemId(id);
             return ResponseEntity.ok(item);
         }
         catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("No item found with given id");
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
         }
     }
 
-    @GetMapping(path="/item", produces = "application/json")
-    public List<Item> getItemList() {
-        List<Item> itemList = itemService.getAllItems();
-
-        return itemList;
-    }
-
-    @PostMapping(path="/item", consumes="application/json", produces = "application/json")
-    public ResponseEntity addItem(@RequestBody Item item) {
-        try{
-            item = itemService.addItem(item);
-            
+    @GetMapping(produces = "application/json")
+    public ResponseEntity<List<Item>> getItemList() {
+        try {
+            List<Item> itemList = itemService.getAllItems();
+            return ResponseEntity.ok(itemList);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("Item already exists with given name");
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
         }
-        return ResponseEntity.ok(item);
+    }
+
+    @PostMapping(consumes = "application/json", produces = "application/json")
+    public ResponseEntity<?> addItem(@RequestBody Item item) {
+        try {
+            Item createdItem = itemService.createItem(item);
+            return ResponseEntity.status(HttpStatus.CREATED).body(createdItem);
+        } catch (Exception e) { 
+            return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+        }
         
     }
 
-    @PutMapping(path="/item/{id}", consumes="application/json", produces = "application/json")
-    public ResponseEntity updateItem(@PathVariable Long id, @RequestBody Item item) {
+    @PutMapping(path = "/{id}", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<?> updateItem(@PathVariable Long id, @RequestBody Item item) {
         try{
-            item = itemService.updateItem(id, item);
-            
+            Item updatedItem = itemService.updateItem(id, item);
+            return ResponseEntity.ok(updatedItem);
         } catch (Exception e) {
-            return ResponseEntity.status(HttpStatus.CONFLICT).body("No item found with given id");
-
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(e.getMessage());
         }
-        return ResponseEntity.ok(item);
         
     }
 
-    @DeleteMapping(path="/item/{id}")
+    @DeleteMapping(path = "/{id}")
     public ResponseEntity<String> deleteItem(@PathVariable Long id) {
         try{
             itemService.deleteItem(id);
-            return ResponseEntity.ok("Item with id " + id + " deleted");
+            return ResponseEntity.ok("Item with id " + id + " deleted successfully!");
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found");
         }
     }
-
+}
 //    @GetMapping(path="", produces = "application/json")
 //    public ResponseEntity<Menu> getMenu(@RequestParam String location) {
 //        Menu menu = menuService.getMenuByLocation(location);
