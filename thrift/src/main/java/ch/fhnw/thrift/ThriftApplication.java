@@ -1,4 +1,4 @@
-package ch.fhnw.pizza;
+package ch.fhnw.thrift;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -6,21 +6,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ch.fhnw.pizza.business.service.MenuService;
-import ch.fhnw.pizza.data.domain.Pizza;
+import ch.fhnw.thrift.business.service.ItemService;
+import ch.fhnw.thrift.data.domain.Item;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.annotation.PostConstruct;
 
 @SpringBootApplication
 @RestController
 @Hidden // Hide this controller from the Swagger UI
-public class PizzaApplication {
+public class ThriftApplication {
 
 	@Autowired
-	private MenuService menuService;
+	private ItemService itemService;
 
 	public static void main(String[] args) {
-		SpringApplication.run(PizzaApplication.class, args);
+		SpringApplication.run(ThriftApplication.class, args);
 	}
 	
 
@@ -29,15 +29,15 @@ public class PizzaApplication {
 	// To resolve the error, delete the file and restart the application
 	@PostConstruct
 	private void initPlaceholderData() throws Exception {
-		Pizza pizza = new Pizza();
-		pizza.setPizzaName("Margherita");
-		pizza.setPizzaToppings("Tomato sauce, mozzarella, basil");
-		menuService.addPizza(pizza);
+		Item item = new Item();
+		pizza.setItemName("FHNW Tote Bag");
+		pizza.setItemDescription("Official FHNW merch");
+		itemService.addItem(item);
 
-		pizza = new Pizza();
-		pizza.setPizzaName("Funghi");
-		pizza.setPizzaToppings("Tomato sauce, mozzarella, mushrooms");
-		menuService.addPizza(pizza);
+		item = new Item();
+		pizza.setItemName("Business Maths Book");
+		pizza.setItemDescription("Barely used Business Maths 1 Book for BIT students");
+		itemService.addItem(item);
 		
 	}
 
