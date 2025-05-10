@@ -19,8 +19,8 @@ public class Item {
     private String description;
     private Double price;
 
-    @ManyToOne
-    private List<Category> categoryList;
+ //   @ManyToOne
+ //   private List<Category> categoryList;
 
     public Long getId() {
         return id;
@@ -54,13 +54,13 @@ public class Item {
         this.price = price;
     }
 
-    public List<Category> getCategoryList() {
-        return categoryList;
-    }
+//    public List<Category> getCategoryList() {
+//        return categoryList;
+//    }
 
-    public void setCategoryList(List<Category> categoryList) {
-        this.categoryList = categoryList;
-    }
+//    public void setCategoryList(List<Category> categoryList) {
+//        this.categoryList = categoryList;
+//    }
 
     
     
