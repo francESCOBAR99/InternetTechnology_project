@@ -29,29 +29,28 @@ FHNW Thrift is an online markeplace for students at FHNW to resell studying mate
 1. As a user, I want to create offers for my fellow students.
 2. As a user, I want to filter offers by location.
 3. As a user, I want to report suspicious offers to avoid getting scammed.
-4. As a user, I want to delete my offers, so that I do not get contacted anymore after my offer is sold.
-5. As a user, I want to contact a seller when I am insterested in a product.
-6. As a user, I should be able to contact the admin to edit or delete an existing offer.
-7. As an admin, I want to evaluate (approve or delete) newly created user offers to ensure compliance.
-8. As an admin, I want to modify and delete existing offers.
-9. As an admin, I want to refrain users access in case of user suspicious activities. 
+4. As a user, I want to contact a seller when I am insterested in a product.
+5. As a user, I should be able to contact the admin to edit or delete an existing offer.
+6. As an admin, I want to modify or delete existing offers.
+(7. As an admin, I want to refrain users access in case of user suspicious activities.) 
 
 ### Use Case
 
 ![](images/use-case.png)
 
 - UC-1 User creates object
-- UC-2 User changes existing object
-- UC-3 User deletes own object
-- UC-4 User can flag object as suspicious
+- UC-2 Admin changes existing object
+- UC-3 Admin deletes object
+- UC-4 User can report object as suspicious
 - UC-5 Admin can create, edit, delete objects
-- UC-6 User can sort by school location
+- UC-6 User can sort by school location, category and condition
 - UC-7 User can contact other user through portal
+- UC-8 User can contact Admin to edit or delete own offers
 
 - UC-1 [Show all the offers]: Admin can retrieve all the offerings on the database
 - UC-2 [Show an offer]: Admin can retrieve the information on a specific offer.
-- UC-3 [Edit an offer]: User can create, update, and delete offers from the database.
-- UC-4 [Show Location Offers]: User can retrieve specific offers by location.
+- UC-3 [Create an offer]: User can create an offer.
+- UC-4 [Show Location, Condition or Category Offers]: User can retrieve specific offers by location, category or condition.
 
 ## Design
 > 🚧: Keep in mind the Corporate Identity (CI); you shall decide appropriately the color schema, graphics, typography, layout, User Experience (UX), and so on.
@@ -82,7 +81,7 @@ Link: <iframe width="800" height="600" frameborder="0" allow="clipboard-write;ca
 
 Based on the UC-4 and UC-5, there will be the opportunity that the user can report a post and the Admin to delete it and also take measures to act on this report. 
 
-- If the offer on the platform looks suspicious, the user is allowed to report it through a "Report!" button or through a message to the Admin. 
+- If the offer on the platform looks suspicious, the user is allowed to report it through a "Report!" button to the Admin. 
 - If the offer on the platform looks suspicious, the Admin is allowed to delete the post and either warn or ban the user from creating new posts. 
 
 **Path**: (path for the business logic to be still attached)
