@@ -171,8 +171,8 @@ Alternatively, you can deploy your application to a free PaaS like [Render](http
 - Front-end developer (creation of code, maintenance and testing): Francesco Leone, Michelle Liva, Sidal Oezbey
 - Scenario Analysis (Analysis of the business case, segregation of tasks and compiling ideas): Francesco Leone, Michelle Liva, Sidal Oezbey
 - Prototype Design (Designing the prototype on paper and implementation on Budibase): Francesco Leone, Michelle Liva, Sidal Oezbey
-- README file maintenance (Maintaining the GitHub README file throughout the project): Michelle Liva
-- Budibase maintenance (Maintaining the Budibase prototype throughout the project): Sidal Oezbey 
+- README file maintenance (Maintaining the GitHub README file throughout the project): Francesco Leone, Michelle Liva, Sidal Oezbey 
+- Budibase maintenance (Maintaining the Budibase prototype throughout the project): Francesco Leone, Michelle Liva, Sidal Oezbey 
 
 ### Milestones
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
