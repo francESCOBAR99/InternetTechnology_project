@@ -31,7 +31,7 @@ FHNW Thrift is an online markeplace for students at FHNW to resell studying mate
 3. As a user, I want to report suspicious offers to avoid getting scammed.
 4. As a user, I want to delete my offers, so that I do not get contacted anymore after my offer is sold.
 5. As a user, I want to contact a seller when I am insterested in a product.
-6. As a user, I want to edit my offers.
+6. As a user, I should be able to contact the admin to edit or delete an existing offer.
 7. As an admin, I want to evaluate (approve or delete) newly created user offers to ensure compliance.
 8. As an admin, I want to modify and delete existing offers.
 9. As an admin, I want to refrain users access in case of user suspicious activities. 
