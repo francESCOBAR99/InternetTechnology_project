@@ -75,8 +75,6 @@ The prototype is currently being created through Budibase.
 
 ![](images/https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/images/FHNW%20Thrift%20UML%20.jpg)
 
-<img width="449" alt="image" src="https://github.com/user-attachments/assets/73d5d084-9004-4542-bf6d-fa61a7fe53e6" />)
-
 
 ### Business Logic 
 
