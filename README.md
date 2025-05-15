@@ -31,31 +31,28 @@ Within the application, the users are limited to creating offers with the aim of
 
 ### User Stories
 1. As a user, I want to create offers for my fellow students, teachers and other individuals within the FHNW organization.
-2. As a user, I want to filter offers by location.
+2. As a user, I want to view all the offers and the details to an offer and to filter offers by location, category or condition.
 3. As a user, I want to report suspicious offers to avoid getting scammed.
-4. As a user, I want to contact a seller when I am insterested in a product.
+4. As a user, I want to contact a seller when I am interested in a product.
 5. As a user, I should be able to contact the admin to edit or delete an existing offer.
-6. As an admin, I want to modify or delete existing offers.
-(7. As an admin, I want to refrain users access in case of user suspicious activities.) 
+6. As an admin, I should be able to see all the existing offers in the database and I should be able to modify or delete existing offers.
+7. As an admin, I should be able to see the entire user list and I should be able to modify user details or remove users from the user list. 
 
 ### Use Case
 
 ![](images/use-case.png)
 
-- UC-1 User creates an object
-- UC-2 Admin changes an existing object
-- UC-3 Admin deletes an object
-- UC-4 User can report an object as suspicious
-- UC-5 Admin can create, edit and delete objects
-- UC-6 User can sort by school location, category and condition
-- UC-7 Admin can sort by school location, category and condition
-- UC-7 User can contact other user through portal
-- UC-8 User can contact Admin to edit or delete own offers
+- UC-1 [Create an offer] User creates an object
+- UC-2 [View offer details] User can view all the details to an offer 
+- UC-3 [Applying a filter to the existing offers] User can sort the offers by school location, category and condition
+- UC-4 [Report an existing offer] User can report an object as suspicious
+- UC-5 [Contacting another user] User can contact another user through the FHNW Thrift application
+- UC-6 [Contacting the admin] User can contact Admin to edit or delete own offers
+- UC-7 [Viewing all the offers] Admin and User can view all the offers 
+- UC-8 [Modify or delete an existing offer] Admin changes or deletes an existing object
+- UC-9 [Viewing all the users] Admin can view all the users registered on FHNW Thrift
+- UC-10 [Modify user details or remove user from user list] Admin changes user details or deletes user from the user list
 
-- UC-1 [Show all the offers]: Admin can retrieve all the offerings on the database
-- UC-2 [Show an offer]: Admin can retrieve the information on a specific offer.
-- UC-3 [Create an offer]: User can create an offer.
-- UC-4 [Show Location, Condition or Category Offers]: User can retrieve specific offers by location, category or condition.
 
 ## Design
 > 🚧: Keep in mind the Corporate Identity (CI); you shall decide appropriately the color schema, graphics, typography, layout, User Experience (UX), and so on.
