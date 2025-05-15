@@ -40,7 +40,7 @@ Within the application, the users are limited to creating offers with the aim of
 
 ### Use Case
 
-![](images/User_Cases_FHNW_Thrift.png)
+![](images/User_Cases_FHNW_Thrift.jpg)
 
 - UC-1 [Create an offer] User creates an object
 - UC-2 [View offer details] User can view all the details to an offer 
