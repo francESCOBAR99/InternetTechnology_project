@@ -60,7 +60,8 @@ The design has been sketched through drawio and has been created in Budibase. Th
 
 ### Wireframe
 
-The wireframe is created through drawio in order to visualize what is being planned for the prototype to look like. 
+The wireframe was created through drawio in order to visualize how the prototype was planned to look like. 
+Disclaimer: During the course of the creation of the program, the wireframe and the prototype design will differ from each other. The prototype will be highly based according to Budibase's functionalities. 
 LInk: [https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?usp=sharing ](https://app.diagrams.net/#G1EdAtBRFfmMlq_bZgUat0rvuNs8qZ22Bt#%7B%22pageId%22%3A%226ppb-k3glDpuP1GKOrRW%22%7D)
 
 ### Prototype
