@@ -55,9 +55,8 @@ Within the application, the users are limited to creating offers with the aim of
 
 
 ## Design
-> 🚧: Keep in mind the Corporate Identity (CI); you shall decide appropriately the color schema, graphics, typography, layout, User Experience (UX), and so on.
 
-The design has been sketched through drawio and is currently being created in Budibase.
+The design has been sketched through drawio and has been created in Budibase. The design was done and discussed by the whole project team and is based on a simple application design to ensure a user-friendly program. Additionally the colors have been selected according to FHNW's color scheme to maintain the university's identity. 
 
 ### Wireframe
 
