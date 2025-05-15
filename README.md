@@ -67,10 +67,9 @@ LInk: [https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?us
 ### Prototype
 
 The prototype is currently being created through Budibase. 
-Link: <iframe width="800" height="600" frameborder="0" allow="clipboard-write;camera;geolocation;fullscreen" src="https://internettechnologyprojectbitpt3b2025.budibase.app/embed/fhnw-thrift"></iframe>
+(pictures to be added)
 
-### Domain Design (still to be done) 
-> 🚧: Provide a picture and describe your domain model; you may use Entity-Relationship Model or UML class diagram. Both can be created in Visual Paradigm - we have an academic license for it.
+### Domain Design 
 
 (The `ch.fhnw.pizza.data.domain` package contains the following domain objects / entities including getters and setters:
 
