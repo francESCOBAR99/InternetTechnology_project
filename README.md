@@ -69,7 +69,7 @@ LInk: [https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?us
 The prototype is currently being created through Budibase. 
 (pictures to be added)
 
-### Domain Design 
+### Domain Design (not done)
 
 (The `ch.fhnw.pizza.data.domain` package contains the following domain objects / entities including getters and setters:
 
@@ -77,10 +77,10 @@ The prototype is currently being created through Budibase.
 
 ### Business Logic 
 
-Based on the UC-4 and UC-5, there will be the opportunity that the user can report a post and the Admin to delete it and also take measures to act on this report. 
+Based on the UC-4 and UC-8, there will be the opportunity that the user can report an offer and ask the admin to delete it and therefore, take measures to act on this report. 
 
-- If the offer on the platform looks suspicious, the user is allowed to report it through a "Report!" button to the Admin. 
-- If the offer on the platform looks suspicious, the Admin is allowed to delete the post and either warn or ban the user from creating new posts. 
+- If the offer on the platform looks suspicious, the user is allowed to report it through a "Report!" button to the admin. 
+- If the offer on the platform looks suspicious, the admin is allowed to delete the post. 
 
 **Path**: (path for the business logic to be still attached)
 
@@ -88,11 +88,11 @@ Based on the UC-4 and UC-5, there will be the opportunity that the user can repo
 
 **Method:** `GET`
 
-## Implementation (still to be done) 
-> 🚧: Briefly describe your technology stack, which apps were used and for what.
+## Implementation 
 
-### Backend Technology (still to be done) 
-> 🚧: It is suggested to clone this repository, but you are free to start from fresh with a Spring Initializr. If so, describe if there are any changes to the PizzaRP e.g., different dependencies, versions & etc... Please, also describe how your database is set up. If you want a persistent or in-memory H2 database check [link](https://github.com/FHNW-INT/Pizzeria_Reference_Project/blob/main/pizza/src/main/resources/application.properties). If you have placeholder data to initialize at the app, you may use a variation of the method **initPlaceholderData()** available at [link](https://github.com/FHNW-INT/Pizzeria_Reference_Project/blob/main/pizza/src/main/java/ch/fhnw/pizza/PizzaApplication.java).
+### Backend Technology
+
+The repository was created by using the Pizzeria Reference as an inspiration. 
 
 This Web application is relying on [Spring Boot](https://projects.spring.io/spring-boot) and the following dependencies:
 
@@ -126,40 +126,21 @@ Then, the following further dependencies have been added to the project `pom.xml
 ### Frontend Technology (still to be done) 
 > 🚧: Describe your views and what APIs is used on which view. If you don't have access to the Internet Technology class Budibase environment(https://inttech.budibase.app/), please write to Devid on MS teams.
 
-This Web application was developed using Budibase and it is available for preview at https://inttech.budibase.app/app/pizzeria. 
+This Web application was developed using Budibase and it is available for preview at <iframe width="800" height="600" frameborder="0" allow="clipboard-write;camera;geolocation;fullscreen" src="https://internettechnologyprojectbitpt3b2025.budibase.app/embed/fhnw-thrift"></iframe>. 
 
-## Execution (still to be done) 
-> 🚧: Please describe how to execute your app and what configurations must be changed to run it. 
+## Execution 
 
-**The codespace URL of this Repo is subject to change.** Therefore, the Budibase PizzaRP webapp is not going to show any data in the view, when the URL is not updated or the codespace is offline. Follow these steps to start the webservice and reconnect the webapp to the new webservice url. 
+In order to run the application, a running codespace must first be fixed. As soon as the codespace is proven to be running and the URL can be accessed through the 8080 server, the link must be copied into Budibase's backend. To ensure a smooth delivery of the program, the backend was first developed, which was then coupled with the Budibase application. 
 
-1. Clone PizzaRP in a new repository.
-2. Start your codespace (see video guide at: [link](https://www.youtube.com/watch?v=_W9B7qc9lVc&ab_channel=GitHub))
-3. Run the PizzaRP main available at PizzaApplication.java on your own codespace.
-4. Set your app with a public port, see the guide at [link](https://docs.github.com/en/codespaces/developing-in-a-codespace/forwarding-ports-in-your-codespace).
-5. Create an own Budibase app, you can export/import the existing Pizzeria app. Guide available at [link](https://docs.budibase.com/docs/export-and-import-apps).
-6. Update the pizzeria URL in the datasource and publish your app.
-
-Project Team's procedure:
-1. PizzaRP is cloned in a new repository.
-2. Codespace started and copilot used to gather inspiration for the new code for "thrift" as shown in this repository.
-3. 
-
-### Deployment to a PaaS
-> 🚧: Deployment to PaaS is optional but recommended as it will make your application (backend) accessible without server restart and through a unique, constantly available link.  
-
-Alternatively, you can deploy your application to a free PaaS like [Render](https://dashboard.render.com/register).
-1. Refer to the Dockerfile inside the application root (FHNW-INT/Pizzeria_Reference_Project/pizza).
-2. Adapt line 13 to the name of your jar file. The jar name should be derived from the details in the pom.xml as follows:<br>
-`{artifactId}-{version}.jar` 
-2. Login to Render using your GitHub credentials.
-3. Create a new Web Service and choose Build and deploy from a Git repository.
-4. Enter the link to your (public) GitHub repository and click Continue.
-5. Enter the Root Directory (name of the folder where pom.xml resides).
-6. Choose the Instance Type as Free/Hobby. All other details are default.
-7. Click on Create Web Service. Your app will undergo automatic build and deployment. Monitor the logs to view the progress or error messages. The entire process of Build+Deploy might take several minutes.
-8. After successful deployment, you can access your backend using the generated unique URL (visible on top left under the name of your web service).
-9. This unique URL will remain unchanged as long as your web service is deployed on Render. You can now integrate it in Budibase to make API calls to your custom endpoints.
+Below are the steps that were done throughout the project:
+1. PizzaRP provided by the supervisors was cloned in GitHub to create a new repository.
+2. A codespace was started on GitHub to make the necessary changes.
+3. With the codespace, the code and overall backend technology of the project were debugged to ensure that problems with the code were eliminated. In this case, the debugging was also supported with GitHub's Copilot. 
+5. A ThriftApplication.java was created.
+6. The ThriftRP was made to run that was embedded in the ThriftApplication.java.
+7. The 8080 port was then made public in order to extract the link that can be used in Budibase to run the application.
+8. The Budibase prototype or application was then created.
+9. The URL was then updated in order to publish the application. 
 
 ## Project Management
 
@@ -173,15 +154,20 @@ Alternatively, you can deploy your application to a free PaaS like [Render](http
 
 ### Milestones
 1. **Analysis**: Scenario ideation, use case analysis and user story writing.
-2. **Prototype Design**: Creation of wireframe and prototype.
-3. **Domain Design**: Definition of domain model.
-4. **Business Logic and API Design**: Definition of business logic and API.
-5. **Data and API Implementation**: Implementation of data access and business logic layers, and API.
-6. **Security and Frontend Implementation**: Integration of security framework and frontend realisation.
-7. (optional) **Deployment**: Deployment of Web application on cloud infrastructure.
+2. **Business Logic and API Definition**: Definition of business logic and API needed to be embedded in the application. 
+3. **Wireframe Design**: Creation of wireframe.
+4. **Domain Design**: Definition of domain model.
+5. **Prototype Design**: Creation prototype through Budibase.
+6. **Running and Debugging GitHub Code**: Running and debugging GitHub repository. 
+7. **API Design in Budibase**: API modification in Budibase.
+8. **Data and API Implementation**: Implementation of data access and business logic layers, and API.
+9. **Security and Frontend Implementation**: Integration of security framework and frontend realisation.
 
 ## Current Standing in the Milestone
-(to create BPM) 
+
+- API Design in Budibase (15.05.2025)
+
+![](https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/images/BPM%20FHNW%20Thrift.jpg)
 
 #### Maintainer
 - Francesco Leone
