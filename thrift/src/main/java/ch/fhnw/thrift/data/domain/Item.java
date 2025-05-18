@@ -1,9 +1,10 @@
-package ch.fhnw.thrift.data.domain;
+package ch.fhnw.thrift.data.domain; 
 
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.*;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
@@ -18,6 +19,10 @@ public class Item {
     private String name;
     private String description;
     private Double price;
+    private String condition;
+    private String fhnwLocation;
+    private Long dateCreated;
+    private String imageURL;
 
  //   @ManyToOne
  //   private List<Category> categoryList;
@@ -52,6 +57,38 @@ public class Item {
 
     public void setPrice(Double price) {
         this.price = price;
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
+
+    public String getFhnwLocation() {
+        return fhnwLocation;
+    }
+
+    public void setFhnwLocation(String fhnwLocation) {
+        this.fhnwLocation = fhnwLocation;
+    }
+
+    public Long getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(Long dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 
 //    public List<Category> getCategoryList() {
