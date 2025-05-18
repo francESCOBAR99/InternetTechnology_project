@@ -20,8 +20,8 @@ public class Category {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    @Column(name = "name", nullable = false) 
-    private String name;
+//    @Column(name = "name", nullable = false) 
+//    private String name;
 
     @Column(name = "category_type", nullable = false)
     private String categoryType;
@@ -42,13 +42,13 @@ public class Category {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+//    public void setName(String name) {
+//        this.name = name;
+//    }
 
     public String getCategoryType() {
         return categoryType;
