@@ -1,8 +1,8 @@
 package ch.fhnw.thrift.controller;
 
-import ch.fhnw.pizza.business.service.OfferService;
-import ch.fhnw.pizza.data.domain.Offer;
-import ch.fhnw.pizza.data.domain.Item;
+import ch.fhnw.thrift.business.service.OfferService;
+import ch.fhnw.thrift.data.domain.Offer;
+import ch.fhnw.thrift.data.domain.Item;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
