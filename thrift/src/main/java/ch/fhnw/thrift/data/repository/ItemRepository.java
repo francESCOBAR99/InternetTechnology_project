@@ -1,18 +1,16 @@
 package ch.fhnw.thrift.data.repository;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import ch.fhnw.thrift.data.domain.Item;
+import ch.fhnw.pizza.data.domain.Item;
 
 @Repository
-
+//JpaRepository should be typed to the domain class and an ID type
 public interface ItemRepository extends JpaRepository<Item, Long> {
-    
-    // finding item by ID 
-    Item findById(long id);
-
-    // checking if item exists by name
-    boolean existsByName(String name);
+    Item findByItemName(String itemName);
+    List<Item> findAllByItemDescriptionContainsIgnoreCase(String description);
+    List<Item> findBySuspiciousTrue();
 }
-
