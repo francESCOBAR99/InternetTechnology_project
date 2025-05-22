@@ -1,31 +1,52 @@
 package ch.fhnw.thrift.data.domain; 
 
-import java.util.List;
+import java.time.LocalDateTime;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.CreationTimestamp;
 
-import jakarta.persistence.*;
+import io.swagger.v3.oas.annotations.Hidden;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "item")
 public class Item {
 
     @Id
-    @JsonIgnore
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Hidden //This annotation hides the id field from the swagger documentation
+    @Column(name = "id", nullable = false)
     private Long id;
-    private String name;
-    private String description;
-    private Double price;
-    private String condition;
-    private String fhnwLocation;
-    private Long dateCreated;
-    private String imageURL;
 
- //   @ManyToOne
- //   private List<Category> categoryList;
+    @Column(name = "item_name")
+    private String itemName;
+
+    @Column(name = "item_description")
+    private String itemDescription;
+
+    @Column(name = "item_price")
+    private double itemPrice;
+
+    @Column(name = "item_condition")
+    private String itemCondition;
+
+    @Column(name = "item_location")
+    private String itemLocation;
+
+    @Column(name = "item_date_created")
+    @CreationTimestamp
+    private LocalDateTime itemDateCreated;
+
+    @Column(name = "item_image")
+    private String itemImage;
+
+    @ManyToOne
+    private Offer offer;
 
     public Long getId() {
         return id;
@@ -35,70 +56,71 @@ public class Item {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getItemName() {
+        return itemName;
     }
 
-    public void setName(String name) {
-        this.name = name; 
+    public void setItemName(String itemName) {
+        this.itemName = itemName;
     }
 
-    public String getDescription() {
-        return description;
+    public String getItemDescription() {
+        return itemDescription;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setItemDescription(String itemDescription) {
+        this.itemDescription = itemDescription;
+    } 
+
+    public Double getItemPrice() {
+        return itemPrice;
     }
 
-    public Double getPrice() {
-        return price;
+    public void setItemPrice(Double itemPrice) {
+        this.itemPrice = itemPrice;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public String getItemCondition() {
+        return itemCondition;
     }
 
-    public String getCondition() {
-        return condition;
+    public void setItemCondition(String itemCondition) {
+        this.itemCondition = itemCondition;
     }
 
-    public void setCondition(String condition) {
-        this.condition = condition;
+    public String getItemLocation() {
+        return itemLocation;
     }
 
-    public String getFhnwLocation() {
-        return fhnwLocation;
+    public void setItemLocation(String itemLocation) {
+        this.itemLocation = itemLocation;
     }
 
-    public void setFhnwLocation(String fhnwLocation) {
-        this.fhnwLocation = fhnwLocation;
+    public LocalDateTime getItemDateCreated() {
+        return itemDateCreated;
     }
 
-    public Long getDateCreated() {
-        return dateCreated;
+    public void setItemDateCreated(LocalDateTime itemDateCreated) {
+        this.itemDateCreated = itemDateCreated;
     }
 
-    public void setDateCreated(Long dateCreated) {
-        this.dateCreated = dateCreated;
+    public String getItemImage() {
+        return itemImage;
     }
 
-    public String getImageURL() {
-        return imageURL;
+    public void setItemImage(String itemImage) {
+        this.itemImage = itemImage;
     }
 
-    public void setImageURL(String imageURL) {
-        this.imageURL = imageURL;
+    private boolean suspicious = false;
+
+    public boolean isSuspicious() {
+        return suspicious;
     }
 
-//    public List<Category> getCategoryList() {
-//        return categoryList;
-//    }
-
-//    public void setCategoryList(List<Category> categoryList) {
-//        this.categoryList = categoryList;
-//    }
-
-    
+    public void setSuspicious(boolean suspicious) {
+        this.suspicious = suspicious;
+    }
     
 }
+
