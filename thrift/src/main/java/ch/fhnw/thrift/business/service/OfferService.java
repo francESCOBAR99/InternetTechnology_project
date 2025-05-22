@@ -8,11 +8,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ch.fhnw.pizza.data.domain.Offer;
-import ch.fhnw.pizza.data.domain.SuspiciousItemReport;
-import ch.fhnw.pizza.data.domain.Item;
-import ch.fhnw.pizza.data.repository.ItemRepository;
-import ch.fhnw.pizza.data.repository.SuspiciousItemReportRepository;
+import ch.fhnw.thrift.data.domain.Offer;
+import ch.fhnw.thrift.data.domain.SuspiciousItemReport;
+import ch.fhnw.thrift.data.domain.Item;
+import ch.fhnw.thrift.data.repository.ItemRepository;
+import ch.fhnw.thrift.data.repository.SuspiciousItemReportRepository;
 
 @Service
 public class OfferService {
