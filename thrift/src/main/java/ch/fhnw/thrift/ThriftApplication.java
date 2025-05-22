@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ch.fhnw.pizza.business.service.OfferService;
-import ch.fhnw.pizza.data.domain.Item;
+import ch.fhnw.thrift.business.service.OfferService;
+import ch.fhnw.thrift.data.domain.Item;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.annotation.PostConstruct;
 
