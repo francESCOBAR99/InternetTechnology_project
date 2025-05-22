@@ -14,7 +14,7 @@ public class WelcomeController {
     @GetMapping(value="/")
     public String getWelcomeString() {
         
-        return "Hello, welcome to the FHNW Thrfting. Enjoy trading!";
+        return "Hello, welcome the FHNW Thrift. Enjoy trading!";
     }
 
     @GetMapping(value="/user")
