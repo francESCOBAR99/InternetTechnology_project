@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import ch.fhnw.thrift.business.service.OfferService;
+import ch.fhnw.thrift.business.service.UserService; 
 import ch.fhnw.thrift.data.domain.Item;
+import ch.fhnw.thrift.data.domain.User;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.annotation.PostConstruct;
 
@@ -21,6 +23,9 @@ public class ThriftApplication {
 
 	@Autowired
 	private OfferService offerService;
+
+	@Autowired
+    private UserService userService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ThriftApplication.class, args);
@@ -61,7 +66,46 @@ public class ThriftApplication {
 		item.setItemDateCreated(LocalDateTime.now());
 		item.setItemImage("https://placehold.co/400");
 		offerService.addItem(item);
+
+		// Initialize User data
+
+		User user1 = new User("john_doe", "{bcrypt}$2a$10$9fxQtdWuRaYn5UchAm5iAexbPi7tmRadnDogJwXPR9fVDJyt9g/su", "USER");
+		User user2 = new User("admin_user", "{bcrypt}$2a$10$9fxQtdWuRaYn5UchAm5iAexbPi7tmRadnDogJwXPR9fVDJyt9g/su", "ADMIN");
+
+		try {
+
+			userService.registerUser(user1);
+		userService.registerUser(user2);
+			} catch (Exception e) {
+				System.out.println("User initialization failed: " + e.getMessage()); 
+			}
+	//	User user = new User();
+	//	user.setUsername("john_doe");
+	//	user.setPassword("USERS");
+	//	user.setRole("USER");
+	//	userService.registerUser(user);
+
+	//	user = new User();
+	//	user.setUsername("admin_user");
+	//	user.setPassword("ADMINS");
+	//	user.setRole("ADMIN");
+	//	userService.registerUser(user);
+
+        //try {
+            // Register users
+        //    userService.registerUser(user1);
+        //    userService.registerUser(user2);
+        //} catch (Exception e) {
+            // Handle case where users already exist
+        //    System.out.println("User initialization failed: " + e.getMessage());
+        //}
+    }
+
+
+
 		
 	}
 
-}
+	
+
+

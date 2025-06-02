@@ -9,43 +9,60 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.core.userdetails.User;
 
 import org.springframework.security.core.userdetails.UserDetailsService;
-
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 
+import ch.fhnw.thrift.data.repository.UserRepository;
+
 import static org.springframework.security.config.Customizer.withDefaults;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
 public class SecurityConfig {
 
+    @Autowired
+    private UserRepository userRepository;
+
     @Bean
-    public UserDetailsService users() {
+    public UserDetailsService userDetailsService() {
+        return username -> {
+            ch.fhnw.thrift.data.domain.User user = userRepository.findByUsername(username)
+            .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+            return new org.springframework.security.core.userdetails.User(
+                user.getUsername(),
+                user.getPassword(),
+                user.getAuthorities()
+            );
+        };
+    }
         //Create two users with different roles and add them to the in-memory user store
 
-        return new InMemoryUserDetailsManager(
-            User.withUsername("myuser")
+      //  return new InMemoryUserDetailsManager(
+       //     User.withUsername("myuser")
                 //.password("{noop}password") //create user with an encrypted password instead of the plain text password
-                .password("{bcrypt}$2a$10$9fxQtdWuRaYn5UchAm5iAexbPi7tmRadnDogJwXPR9fVDJyt9g/su")
-                .authorities("READ","ROLE_USER")
-                .build(), 
-            User.withUsername("myadmin")
+         //       .password("{bcrypt}$2a$10$9fxQtdWuRaYn5UchAm5iAexbPi7tmRadnDogJwXPR9fVDJyt9g/su")
+         //       .authorities("READ","ROLE_USER")
+         //       .build(), 
+         //   User.withUsername("myadmin")
                 //.password("{noop}password") //create user with an encrypted password instead of the plain text password
-                .password("{bcrypt}$2a$10$9fxQtdWuRaYn5UchAm5iAexbPi7tmRadnDogJwXPR9fVDJyt9g/su")
-                .authorities("READ","ROLE_ADMIN")
-                .build());
+          //      .password("{bcrypt}$2a$10$9fxQtdWuRaYn5UchAm5iAexbPi7tmRadnDogJwXPR9fVDJyt9g/su")
+          //      .authorities("READ","ROLE_ADMIN")
+          //      .build());
 
-    }
+    //}
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests( auth -> auth
-                        .requestMatchers("/menu").hasRole("USER") //note that the role need not be prefixed with "ROLE_"
-                        .requestMatchers("/menu/pizzas/**").hasRole("ADMIN") //note that the role need not be prefixed with "ROLE_"
-                        .requestMatchers("/menu/**",
+                        .requestMatchers("/offer").hasRole("USER") //note that the role need not be prefixed with "ROLE_"
+                        .requestMatchers("/offer/item/**").hasRole("ADMIN") //note that the role need not be prefixed with "ROLE_"
+                        .requestMatchers("/offer/**",
                                                     "/**", //allow access to the home page
                                                     "/swagger-ui.html", //allow access to the swagger UI
                                                     "/v3/api-docs/**",  //allow access to the swagger API documentation
