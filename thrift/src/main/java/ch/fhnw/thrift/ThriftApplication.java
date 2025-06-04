@@ -9,8 +9,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ch.fhnw.thrift.business.UserService;
 import ch.fhnw.thrift.business.service.OfferService;
 import ch.fhnw.thrift.data.domain.Item;
+import ch.fhnw.thrift.data.domain.User;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.annotation.PostConstruct;
 
@@ -21,6 +23,9 @@ public class ThriftApplication {
 
 	@Autowired
 	private OfferService offerService;
+
+	@Autowired
+	private UserService userService;
 
 	public static void main(String[] args) {
 		SpringApplication.run(ThriftApplication.class, args);
@@ -61,6 +66,20 @@ public class ThriftApplication {
 		item.setItemDateCreated(LocalDateTime.now());
 		item.setItemImage("https://placehold.co/400");
 		offerService.addItem(item);
+
+		User user = new User();
+		user.setUsername("admin");
+		user.setPassword("admin");
+		user.setRole("ROLE_ADMIN");
+		userService.addUser(user);
+		user = new User();
+
+		user = new User();
+		user.setUsername("user");
+		user.setPassword("user");
+		user.setRole("ROLE_USER");
+		userService.addUser(user);
+		user = new User();
 		
 	}
 
