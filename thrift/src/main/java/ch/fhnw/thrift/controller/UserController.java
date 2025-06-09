@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import ch.fhnw.thrift.business.UserService;
+import ch.fhnw.thrift.business.service.UserService;
 import ch.fhnw.thrift.data.domain.User;
 
 @RestController

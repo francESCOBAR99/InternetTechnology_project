@@ -1,4 +1,4 @@
-package ch.fhnw.thrift.business;
+package ch.fhnw.thrift.business.service;
 
 import java.util.List;
 

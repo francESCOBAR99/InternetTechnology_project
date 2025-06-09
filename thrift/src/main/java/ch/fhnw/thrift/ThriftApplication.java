@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import ch.fhnw.thrift.business.UserService;
+import ch.fhnw.thrift.business.service.UserService;
 import ch.fhnw.thrift.business.service.OfferService;
 import ch.fhnw.thrift.data.domain.Item;
 import ch.fhnw.thrift.data.domain.User;
