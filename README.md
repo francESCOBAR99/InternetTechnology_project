@@ -86,6 +86,7 @@ Based on the UC-4 and UC-8, there will be the opportunity that the user can repo
 **Path**: *URL*/offer/{id}
 
 **Param**: Long id 
+
 The controller is connected to the "Item.java" domain, in which a boolean is placed in case an item has been reported as suspicious. Here is the exact code within the domain, which helps filter the items. 
 
  private boolean suspicious = false;
@@ -104,6 +105,7 @@ The controller is connected to the "Item.java" domain, in which a boolean is pla
 **Path**: *URL*/item/{id}
 
 **Param**: Long id 
+
 To delete an item the id of this item has to be identified. 
 
 **Method**: `DELETE`
