@@ -73,7 +73,7 @@ The prototype is currently being created through Budibase.
 
 (The `ch.fhnw.pizza.data.domain` package contains the following domain objects / entities including getters and setters:
 
-![](images/entity relationship.jpg)
+![](https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/images/entity%20relationship.jpg)
 
 ### Business Logic 
 
