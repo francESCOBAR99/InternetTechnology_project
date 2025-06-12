@@ -82,11 +82,31 @@ Based on the UC-4 and UC-8, there will be the opportunity that the user can repo
 - If the offer on the platform looks suspicious, the user is allowed to report it through a "Report!" button to the admin. 
 - If the offer on the platform looks suspicious, the admin is allowed to delete the post. 
 
-**Path**: (path for the business logic to be still attached)
+**Showing all suspicious offers from the admin view**
+**Path**: *URL*/offer/{id}
 
-**Param**: (parameter for the business logic to be still attached)
+**Param**: Long id 
+The controller is connected to the "Item.java" domain, in which a boolean is placed in case an item has been reported as suspicious. Here is the exact code within the domain, which helps filter the items. 
+
+ private boolean suspicious = false;
+
+    public boolean isSuspicious() {
+        return suspicious;
+    }
+
+    public void setSuspicious(boolean suspicious) {
+        this.suspicious = suspicious;
+    }
 
 **Method:** `GET`
+
+**The admin deleting the suspicious post**
+**Path**: *URL*/item/{id}
+
+**Param**: Long id 
+To delete an item the id of this item has to be identified. 
+
+**Method**: `DELETE`
 
 ## Implementation 
 
