@@ -9,10 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ch.fhnw.thrift.data.domain.Offer;
-import ch.fhnw.thrift.data.domain.SuspiciousItemReport;
 import ch.fhnw.thrift.data.domain.Item;
 import ch.fhnw.thrift.data.repository.ItemRepository;
-import ch.fhnw.thrift.data.repository.SuspiciousItemReportRepository;
 
 @Service
 public class OfferService {
@@ -99,25 +97,7 @@ public class OfferService {
         itemRepository.save(item);
     }
 
-    @Autowired
-private SuspiciousItemReportRepository suspiciousItemReportRepository;
 
-public SuspiciousItemReport reportSuspiciousItem(Long itemId, String reportedBy, String reason) throws Exception {
-    Item item = itemRepository.findById(itemId)
-        .orElseThrow(() -> new Exception("Item with id " + itemId + " does not exist"));
-    item.setSuspicious(false);
-    itemRepository.save(item);
-
-    SuspiciousItemReport report = new SuspiciousItemReport();
-    report.setItem(item);
-    report.setReportedBy(reportedBy);
-    report.setReason(reason);
-    return suspiciousItemReportRepository.save(report);
-}
-
-public List<SuspiciousItemReport> getReportsForItem(Long itemId) {
-    return suspiciousItemReportRepository.findByItemId(itemId);
-}
         
 }
 
