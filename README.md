@@ -83,7 +83,7 @@ Based on the UC-4 and UC-8, there will be the opportunity that the user can repo
 - If the offer on the platform looks suspicious, the admin is allowed to delete the post. 
 
 **Showing all suspicious offers from the admin view**
-**Path**: *URL*/offer/{id}
+**Path**: *"URL"*/offer/{id}
 
 **Param**: Long id 
 
@@ -102,7 +102,7 @@ The controller is connected to the "Item.java" domain, in which a boolean is pla
 **Method:** `GET`
 
 **The admin deleting the suspicious post**
-**Path**: *URL*/item/{id}
+**Path**: *"URL"*/item/{id}
 
 **Param**: Long id 
 
