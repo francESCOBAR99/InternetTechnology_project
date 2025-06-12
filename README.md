@@ -71,7 +71,7 @@ The prototype is currently being created through Budibase.
 
 ### Domain Design (not done)
 
-(The `ch.fhnw.pizza.data.domain` package contains the following domain objects / entities including getters and setters:
+The `ch.fhnw.pizza.data.domain` package contains the following domain objects / entities including getters and setters:
 
 ![](https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/images/entity%20relationship.jpg)
 
@@ -101,7 +101,7 @@ The controller is connected to the "Item.java" domain, in which a boolean is pla
 
 **Method:** `GET`
 
-**The admin deleting the suspicious post**
+**The admin deleting the suspicious offer**
 **Path**: *"URL"*/item/{id}
 
 **Param**: Long id 
@@ -109,6 +109,38 @@ The controller is connected to the "Item.java" domain, in which a boolean is pla
 To delete an item the id of this item has to be identified. 
 
 **Method**: `DELETE`
+
+## Other Paths and Parameters
+
+**Getting all items**
+**Path**: *"URL"*/item
+
+**Param**: No direct parameter as the whole list is being extracted. 
+
+Getting all items. 
+
+**Method**: `GET`
+
+**Creating a new item / offer**
+**Path**: *"URL"*/item
+
+**Param**: The whole "Item.java" body. 
+
+**Method"": `POST`
+
+**Updating an item / offer**
+**Path**: *"URL"*/item/{id}
+
+**Param**: Long id 
+
+**Method**: `PUT`
+
+**Getting all items / offers according to their location**
+**Path**: *"URL"*/
+
+**Param**: location 
+
+**Method**: `GET`
 
 ## Implementation 
 
