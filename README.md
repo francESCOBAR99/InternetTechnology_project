@@ -185,8 +185,6 @@ Below are the steps that were done throughout the project:
 8. **Data and API Implementation**: Implementation of data access and business logic layers, and API.
 9. **Security and Frontend Implementation**: Integration of security framework and frontend realisation.
 
-## The Milestones During the Project
-
 ![](https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/images/BPM%20FHNW%20Thrift.jpg)
 
 #### Maintainer
