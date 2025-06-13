@@ -77,6 +77,18 @@ public class OfferController {
         Offer offer = offerService.getOfferByLocation(location);
         return ResponseEntity.ok(offer);      
     }
+
+            @GetMapping(path="/user", produces = "application/json")
+    public String getOffer() {
+        return "logged in as user";
+
+    }
+
+            @GetMapping(path="/admin", produces = "application/json")
+    public String getItems() {
+        return "logged in as admin";
+    }
+
     
 }
 
