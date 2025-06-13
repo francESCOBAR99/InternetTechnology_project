@@ -69,8 +69,7 @@ LInk: [https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?us
 The prototype is currently being created through Budibase. 
 (pictures to be added)
 
-### Domain Design (not done)
-
+### Domain Design
 The `ch.fhnw.pizza.data.domain` package contains the following domain objects / entities including getters and setters:
 
 ![](https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/images/entity%20relationship.jpg)
