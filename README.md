@@ -66,8 +66,7 @@ LInk: [https://drive.google.com/file/d/1aJUydp2JTiglDqXS5bhqTPHjDJ3wwXQq/view?us
 
 ### Prototype
 
-The prototype is currently being created through Budibase. 
-(pictures to be added)
+The prototype was created through Budibase and snippets can be found in the Frontend Technology section. 
 
 ### Domain Design
 The `ch.fhnw.pizza.data.domain` package contains the following domain objects / entities including getters and setters:
@@ -178,9 +177,9 @@ Then, the following further dependencies have been added to the project `pom.xml
 
 ### Frontend Technology 
 
-This Web application was developed using Budibase and it is available for preview at [<iframe width="800" height="600" frameborder="0" allow="clipboard-write;camera;geolocation;fullscreen" src="https://internettechnologyprojectbitpt3b2025.budibase.app/embed/fhnw-thrift"></iframe>](https://inttech.budibase.app/builder/app/app_dev_inttech_424070208a3d403ebf8640e01bd143df/design/screen_6077abae48a44a6183012a842cddcfdf/screen_6077abae48a44a6183012a842cddcfdf-screen). 
+This Web application was developed using Budibase and it is available for preview at https://inttech.budibase.app/app/basel8_thrifting_b#/internet-tech-project.
 
-The exported app can be found here: https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/Basel8_Thrifting_B-export-1749851776609.enc.tar.gz. 
+The exported app can be found here: https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/Basel8_Thrifting_B-export-1749854686572.enc.tar.gz. The password for the encryption is: FHNWthriftapp.
 
 Create New Offer Form (API used: PostItem)
 
