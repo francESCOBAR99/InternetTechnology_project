@@ -218,18 +218,17 @@ Admin View Reported Offers (API used: GetItems with filter Suspicious = True)
 
 ![image](https://github.com/user-attachments/assets/05e4f953-b7c8-4d5c-b32b-c8cbe47b92ab)
 
-![image](https://github.com/user-attachments/assets/cd99fcad-bba9-43a8-ad54-b52b3d9aa41d)
-
 Signing up as a new user (API used: Post_User)
 
-![image](https://github.com/user-attachments/assets/7f38040d-a573-4aaf-9948-966966ca0224)
+![image](https://github.com/user-attachments/assets/cd99fcad-bba9-43a8-ad54-b52b3d9aa41d)
 
 View of all the Users and the Admin (API used: Get_users)
 
-![image](https://github.com/user-attachments/assets/349169b2-2040-49a3-9b38-373bfff03303)
+![image](https://github.com/user-attachments/assets/7f38040d-a573-4aaf-9948-966966ca0224)
 
 Deleting a user (API used: Delete_User)
 
+![image](https://github.com/user-attachments/assets/349169b2-2040-49a3-9b38-373bfff03303)
 
 
 
