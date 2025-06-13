@@ -189,7 +189,7 @@ Listing all offers (API used: GetItems)
 
 ![image](https://github.com/user-attachments/assets/6a83e2c3-c92e-4237-af77-6968869c2ee7)
 
-Detailed offer view (API used: GetItems)
+Detailed offer view (API used: 03_GetItem_By_ID)
 
 <img width="464" alt="image" src="https://github.com/user-attachments/assets/e4b7cd6d-17e3-4d56-acfa-43a804f1cfe5" />
 
