@@ -176,10 +176,9 @@ Then, the following further dependencies have been added to the project `pom.xml
    </dependency>
 ```
 
-### Frontend Technology (still to be done) 
-> 🚧: Describe your views and what APIs is used on which view. If you don't have access to the Internet Technology class Budibase environment(https://inttech.budibase.app/), please write to Devid on MS teams.
+### Frontend Technology 
 
-This Web application was developed using Budibase and it is available for preview at <iframe width="800" height="600" frameborder="0" allow="clipboard-write;camera;geolocation;fullscreen" src="https://internettechnologyprojectbitpt3b2025.budibase.app/embed/fhnw-thrift"></iframe>. 
+This Web application was developed using Budibase and it is available for preview at [<iframe width="800" height="600" frameborder="0" allow="clipboard-write;camera;geolocation;fullscreen" src="https://internettechnologyprojectbitpt3b2025.budibase.app/embed/fhnw-thrift"></iframe>](https://inttech.budibase.app/builder/app/app_dev_inttech_424070208a3d403ebf8640e01bd143df/design/screen_6077abae48a44a6183012a842cddcfdf/screen_6077abae48a44a6183012a842cddcfdf-screen). 
 
 Create New Offer Form (API used: PostItem)
 
