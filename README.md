@@ -40,7 +40,7 @@ Within the application, the users are limited to creating offers with the aim of
 
 ### Use Case
 
-![](https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/images/User%20Cases%20FHNW%20Thrift.jpg)
+![](https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/images/Use%20Case%20Diagram1.jpg)
 
 - UC-1 [Create an offer] User creates an offer
 - UC-2 [View offer details] User can view all the details to an offer 
