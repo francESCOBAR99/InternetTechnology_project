@@ -31,27 +31,27 @@ Within the application, the users are limited to creating offers with the aim of
 
 ### User Stories
 1. As a user, I want to create offers for my fellow students, teachers and other individuals within the FHNW organization.
-2. As a user, I want to view all the offers and the details to an offer and to filter offers by location, category or condition.
+2. As a user, I want to view all the offers and the details to an offer and to filter offers by location.
 3. As a user, I want to report suspicious offers to avoid getting scammed.
 4. As a user, I want to contact a seller when I am interested in a product.
-5. As a user, I should be able to contact the admin to edit or delete an existing offer.
-6. As an admin, I should be able to see all the existing offers in the database and I should be able to modify or delete existing offers.
-7. As an admin, I should be able to see the entire user list and I should be able to modify user details or remove users from the user list. 
+5. As a user, I should be able to contact the admin of the FHNW Trifting App.
+6. As an admin, I should be able to see all the existing offers in the database and I should be able delete existing offers.
+7. As an admin, I should be able to see the entire user list and I should be able to remove users from the user list. 
 
 ### Use Case
 
 ![](https://github.com/francESCOBAR99/InternetTechnology_project/blob/main/images/User%20Cases%20FHNW%20Thrift.jpg)
 
-- UC-1 [Create an offer] User creates an object
+- UC-1 [Create an offer] User creates an offer
 - UC-2 [View offer details] User can view all the details to an offer 
-- UC-3 [Applying a filter to the existing offers] User can sort the offers by school location, category and condition
-- UC-4 [Report an existing offer] User can report an object as suspicious
+- UC-3 [Applying a filter to the existing offers] User can sort the offers by school location
+- UC-4 [Report an existing offer] User can report an offer as suspicious
 - UC-5 [Contacting another user] User can contact another user through the FHNW Thrift application
-- UC-6 [Contacting the admin] User can contact Admin to edit or delete own offers
+- UC-6 [Contacting the admin] User can contact Admin 
 - UC-7 [Viewing all the offers] Admin and User can view all the offers 
-- UC-8 [Modify or delete an existing offer] Admin changes or deletes an existing object
+- UC-8 [Delete an existing offer] Admin deletes an existing offer
 - UC-9 [Viewing all the users] Admin can view all the users registered on FHNW Thrift
-- UC-10 [Modify user details or remove user from user list] Admin changes user details or deletes user from the user list
+- UC-10 [Remove user from user list] Admin deletes user from the user list
 
 
 ## Design
