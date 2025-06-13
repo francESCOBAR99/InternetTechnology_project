@@ -181,6 +181,36 @@ Then, the following further dependencies have been added to the project `pom.xml
 
 This Web application was developed using Budibase and it is available for preview at <iframe width="800" height="600" frameborder="0" allow="clipboard-write;camera;geolocation;fullscreen" src="https://internettechnologyprojectbitpt3b2025.budibase.app/embed/fhnw-thrift"></iframe>. 
 
+Create New Offer Form (API used: PostItem)
+![image](https://github.com/user-attachments/assets/d29d806d-0428-492c-8ed2-93e7cb580eab)
+
+Listing all offers (API used: GetItems)
+![image](https://github.com/user-attachments/assets/6a83e2c3-c92e-4237-af77-6968869c2ee7)
+
+Detailed offer view (API used: GetItems)
+![image](https://github.com/user-attachments/assets/783e77da-8b00-47d1-929e-f9d38c71ad32)
+
+Contact Seller Form
+![image](https://github.com/user-attachments/assets/3e15f118-2d0f-4e3c-b6be-abd413c5a0e6)
+
+Report Item (API used: PutItem)
+![image](https://github.com/user-attachments/assets/26d989a9-7ba2-4415-9b8a-84c7de628628)
+
+Contact Us Form
+![image](https://github.com/user-attachments/assets/1cc7b3b6-8240-4177-9b75-8ffe61f29f1e)
+
+Thank you for contacting us
+![image](https://github.com/user-attachments/assets/76c7f278-9b3a-4ee0-85d2-a659974fe47b)
+
+
+Admin Home Page
+![image](https://github.com/user-attachments/assets/55495350-ec68-4041-ae8a-21b3c04962b9)
+
+Admin View Reported Offers (API used: GetItems with filter Suspicious = True)
+![image](https://github.com/user-attachments/assets/05e4f953-b7c8-4d5c-b32b-c8cbe47b92ab)
+
+
+
 ## Execution 
 
 In order to run the application, a running codespace must first be fixed. As soon as the codespace is proven to be running and the URL can be accessed through the 8080 server, the link must be copied into Budibase's backend. To ensure a smooth delivery of the program, the backend was first developed, which was then coupled with the Budibase application. 
